@@ -1,8 +1,9 @@
 :root {
-    --gold: #d4af37;        
-    --black: #000000;       
-    --dark-grey: #1a1a1a;   
-    --text-gold: #f1d592;   
+    --gold: #d4af37;
+    --black: #000000;
+    --dark-grey: #1a1a1a;
+    --text-gold: #f1d592;
+}
 
 * {
     margin: 0;
@@ -17,7 +18,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Навігація */
 header {
     background-color: var(--dark-grey);
     border-bottom: 2px solid var(--gold);
@@ -36,12 +37,12 @@ nav ul {
 nav a {
     color: var(--gold);
     text-decoration: none;
-    margin: 0 25px;
+    margin: 0 20px;
     font-weight: bold;
-    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-
+/* Hero Section - ЗОЛОТО ЗАМІСТЬ СИНЬОГО */
 #hero {
     height: 400px;
     display: flex;
@@ -55,13 +56,12 @@ nav a {
 
 h1 {
     color: var(--gold);
-    font-size: 4rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
 }
 
-
+/* Секції */
 section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
@@ -69,46 +69,68 @@ section {
 
 h2 {
     color: var(--gold);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
-
+/* Сітка Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
 article {
     background-color: var(--dark-grey);
-    padding: 30px;
+    padding: 25px;
     border: 1px solid var(--gold);
     border-radius: 8px;
     transition: 0.3s;
 }
 
 article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
-article h3 {
+/* Підвал - ВИПРАВЛЕННЯ НАКЛАДАННЯ */
+footer {
+    background-color: var(--dark-grey);
+    padding: 50px 20px;
+    border-top: 2px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Дистанція між копірайтом та кнопками */
+}
+
+footer p {
+    font-size: 1.1rem;
     color: var(--gold);
 }
 
-footer {
-    background-color: var(--dark-grey);
-    padding: 40px;
-    text-align: center;
-    border-top: 2px solid var(--gold);
+.socials {
+    display: flex;
+    gap: 15px;
 }
 
 .socials a {
     color: var(--gold);
-    margin: 0 15px;
     text-decoration: none;
     border: 1px solid var(--gold);
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 4px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background-color: var(--gold);
+    color: var(--black);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
