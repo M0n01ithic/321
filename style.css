@@ -1,9 +1,9 @@
 /* Глобальні налаштування */
 :root {
-    --primary-color: #3498db;
-    --text-color: #333;
-    --bg-light: #f4f4f4;
-    --white: #ffffff;
+    --primary-color: #3498db; /* Яскраво-синій (акцент) */
+    --text-color: #f4f4f4;    /* Змінено на світлий */
+    --bg-light: #1a1a1a;       /* Змінено на основний темний фон */
+    --white: #2d2d2d;         /* Змінено на темно-сірий для карток */
 }
 
 * {
@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--bg-light); /* Основний фон сторінки тепер темний */
 }
 
 /* Навігація - Flexbox */
@@ -23,7 +24,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    background: #222;
+    background: #222; /* Він вже був темним, добре поєднується */
     padding: 15px;
 }
 
@@ -32,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--white);
+    color: var(--text-color); /* Текст посилання тепер світлий */
     text-decoration: none;
     font-weight: bold;
 }
@@ -41,7 +42,7 @@ nav ul li a {
 #hero {
     height: 400px;
     background: var(--primary-color);
-    color: var(--white);
+    color: white; /* Текст в hero залишаємо білим для контрасту */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,29 +65,13 @@ nav ul li a {
 
 /* Оформлення карток */
 article {
-    background: var(--white);
+    background: var(--white); /* Фон карток тепер темно-сірий */
     padding: 20px;
-    border-radius: 8px; /* Заокруглення кутів */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Тінь */
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.05); /* Змінено на світлу тінь для темного фону */
+    border: 1px solid #444; /* Тонка рамка для контрасту */
 }
 
 article h3 {
     color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-/* Підвал */
-footer {
-    background: #222;
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.socials a {
-    color: var(--primary-color);
-    margin: 0 10px;
-    text-decoration: none;
-}
+    margin-bottom: 10
