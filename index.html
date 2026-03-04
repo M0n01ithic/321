@@ -3,131 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота 2 - Темна тема</title>
-    <style>
-   
-        :root {
-            --primary: #3498db;
-            --text: #f4f4f4;
-            --bg-dark: #121212;
-            --card-bg: #1e1e1e;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-  
-        header {
-            background: #000;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 15px;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        #hero {
-            height: 400px;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        article {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px; 
-            border: 1px solid #333;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
-            transition: 0.3s;
-        }
-
-        article:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        article h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-  
-        footer {
-            background: #000;
-            padding: 40px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .socials {
-            margin-top: 15px;
-        }
-
-        .socials a {
-            color: var(--primary);
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-    
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Лабораторна 2 - Темна тема</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -135,5 +12,50 @@
         <nav>
             <ul>
                 <li><a href="#hero">Головна</a></li>
-                <li><a href="#about">Про себе</a></li>
-                <li><a href
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#projects">Роботи</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Головний екран</h1>
+            <h3>Мій перший сайт</h3>
+            <p>Початок вивчення верстки</p>
+        </section>
+
+        <section id="about">
+            <h2>Про себе</h2>
+            <p style="text-align: center;">Вивчаю HTML та CSS для створення сайтів у темній темі.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Список робіт</h2>
+            <div class="projects-grid">
+                <article>
+                    <h3>Робота 1</h3>
+                    <p>Опис першого проєкту.</p>
+                </article>
+                <article>
+                    <h3>Робота 2</h3>
+                    <p>Опис другого проєкту.</p>
+                </article>
+                <article>
+                    <h3>Робота 3</h3>
+                    <p>Опис третього проєкту.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026</p>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Telegram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
