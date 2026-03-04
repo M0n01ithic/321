@@ -1,8 +1,9 @@
+/* Змінні кольорів: золото та чорний */
 :root {
-    --gold: #d4af37;
-    --black: #000000;
-    --dark: #1a1a1a;
-    --text: #f1d592;
+    --gold: #d4af37;        /* Основне золото */
+    --black: #000000;       /* Чорний фон */
+    --dark-grey: #1a1a1a;   /* Темно-сірий для карток */
+    --text-gold: #f1d592;   /* Світле золото для тексту */
 }
 
 * {
@@ -13,14 +14,16 @@
 
 body {
     background-color: var(--black);
-    color: var(--text);
-    font-family: sans-serif;
+    color: var(--text-gold);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
+/* Навігація - Flexbox */
 header {
-    background-color: var(--dark);
+    background-color: var(--dark-grey);
     border-bottom: 2px solid var(--gold);
-    padding: 15px;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,37 +38,12 @@ nav ul {
 nav a {
     color: var(--gold);
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 25px;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-#hero {
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle, #222 0%, #000 100%);
-    border-bottom: 1px solid var(--gold);
+nav a:hover {
+    text-shadow: 0 0 8px var(--gold);
 }
-
-h1 {
-    color: var(--gold);
-    font-size: 3rem;
-}
-
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Сітка проектів - Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-article {
