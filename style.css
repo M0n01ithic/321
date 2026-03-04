@@ -18,7 +18,7 @@ body {
     line-height: 1.6;
 }
 
-/* Навігація */
+
 header {
     background-color: var(--dark-grey);
     border-bottom: 2px solid var(--gold);
@@ -42,7 +42,7 @@ nav a {
     transition: 0.3s;
 }
 
-/* Hero Section - ЗОЛОТО ЗАМІСТЬ СИНЬОГО */
+
 #hero {
     height: 400px;
     display: flex;
@@ -59,7 +59,7 @@ h1 {
     font-size: 3.5rem;
 }
 
-/* Секції */
+
 section {
     padding: 60px 20px;
     max-width: 1100px;
@@ -73,7 +73,7 @@ h2 {
     text-transform: uppercase;
 }
 
-/* Сітка Grid */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -93,7 +93,7 @@ article:hover {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
-/* Підвал - ВИПРАВЛЕННЯ НАКЛАДАННЯ */
+
 footer {
     background-color: var(--dark-grey);
     padding: 50px 20px;
@@ -101,7 +101,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px; /* Дистанція між копірайтом та кнопками */
+    gap: 25px; 
 }
 
 footer p {
@@ -128,7 +128,7 @@ footer p {
     color: var(--black);
 }
 
-/* Адаптивність */
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
