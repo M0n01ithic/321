@@ -1,9 +1,8 @@
-/* Змінні кольорів: золото та чорний */
 :root {
     --gold: #d4af37;
     --black: #000000;
-    --dark-gray: #1a1a1a;
-    --text-gold: #f1d592;
+    --dark: #1a1a1a;
+    --text: #f1d592;
 }
 
 * {
@@ -14,19 +13,16 @@
 
 body {
     background-color: var(--black);
-    color: var(--text-gold);
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    color: var(--text);
+    font-family: sans-serif;
 }
 
-/* Навігація */
 header {
-    background-color: var(--dark-gray);
+    background-color: var(--dark);
     border-bottom: 2px solid var(--gold);
-    padding: 15px 0;
+    padding: 15px;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 nav ul {
@@ -40,97 +36,56 @@ nav a {
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    text-shadow: 0 0 10px var(--gold);
-}
-
-/* Hero Section */
 #hero {
-    height: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, var(--dark-gray) 0%, var(--black) 100%);
+    background: radial-gradient(circle, #222 0%, #000 100%);
     border-bottom: 1px solid var(--gold);
-    text-align: center;
 }
 
 h1 {
     color: var(--gold);
-    font-size: 3.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
 }
 
-/* Контент */
 section {
-    padding: 70px 20px;
-    max-width: 1100px;
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
 
-h2 {
-    color: var(--gold);
-    margin-bottom: 40px;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-/* Сітка проектів */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
 article {
-    background-color: var(--dark-gray);
-    padding: 25px;
+    background-color: var(--dark);
+    padding: 20px;
     border: 1px solid var(--gold);
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
 }
 
 article h3 {
     color: var(--gold);
-    margin-bottom: 15px;
 }
 
-/* Підвал */
 footer {
-    background-color: var(--dark-gray);
-    padding: 40px;
+    background-color: var(--dark);
+    padding: 30px;
     text-align: center;
     border-top: 2px solid var(--gold);
 }
 
 .socials a {
     color: var(--gold);
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    border: 1px solid var(--gold);
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.socials a:hover {
-    background-color: var(--gold);
-    color: var(--black);
-}
-
-/* Адаптивність */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
 }
