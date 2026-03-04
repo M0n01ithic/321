@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #3498db; 
-    --text-color: #f4f4f4;   
-    --bg-light: #1a1a1a;       
-    --white: #2d2d2d;        
+    --accent: #3498db;
+    --text: #f4f4f4;
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
 }
 
 * {
@@ -12,42 +12,43 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
+    font-family: sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
     line-height: 1.6;
-    background-color: var(--bg-light); 
 }
+
+
 nav ul {
     display: flex;
     justify-content: center;
-    list-style: none;
-    background: #222; 
+    background: #000;
     padding: 15px;
+    list-style: none;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: var(--text-color); 
+nav a {
+    color: var(--text);
     text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
 
+
 #hero {
-    height: 400px;
-    background: var(--primary-color);
-    color: white; 
+    height: 350px;
+    background-color: var(--accent);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-
-#about {
-    padding: 40px;
+#about, #projects {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -56,34 +57,30 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
+    margin-top: 30px;
 }
 
-
 article {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(255,255,255,0.05); 
-    border: 1px solid #444; 
+    border-radius: 10px;
+    border: 1px solid #333;
 }
 
 article h3 {
-    color: var(--primary-color);
+    color: var(--accent);
     margin-bottom: 10px;
 }
 
 
 footer {
-    background: #222; 
-    color: var(--text-color); 
+    background: #000;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
 }
 
 .socials a {
-    color: var(--primary-color);
+    color: var(--accent);
     margin: 0 10px;
     text-decoration: none;
 }
