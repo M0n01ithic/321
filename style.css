@@ -23,6 +23,7 @@ header {
     padding: 15px;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -60,6 +61,7 @@ section {
     text-align: center;
 }
 
+/* Сітка проектів - Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -67,25 +69,3 @@ section {
 }
 
 article {
-    background-color: var(--dark);
-    padding: 20px;
-    border: 1px solid var(--gold);
-    border-radius: 10px;
-}
-
-article h3 {
-    color: var(--gold);
-}
-
-footer {
-    background-color: var(--dark);
-    padding: 30px;
-    text-align: center;
-    border-top: 2px solid var(--gold);
-}
-
-.socials a {
-    color: var(--gold);
-    margin: 0 10px;
-    text-decoration: none;
-}
